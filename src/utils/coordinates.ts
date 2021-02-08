@@ -7,7 +7,7 @@ export const isSamePosition = (a: ICell, b: ICell): boolean => a.x === b.x && a.
 
 export const getNextHeadPosition = (
   headPosition: ICell,
-  direction: Direction,
+  direction: EDirection,
   canvasSize: {
     width: number;
     height: number;

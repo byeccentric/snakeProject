@@ -77,12 +77,14 @@ const App = () => {
 
   return (
     <div className="root">
-      <h1>Game over!</h1>
-      <h2>You scored: {score}</h2>
-      <h3>Good Job!</h3>
-      <button type="button" onClick={handleStartGame}>
-        Let&apos;s do it again
-      </button>
+      <div>
+        <h1>Game over!</h1>
+        <h2>You scored: {score}</h2>
+        <h3>Good Job!</h3>
+        <button type="button" onClick={handleStartGame}>
+          Let&apos;s do it again
+        </button>
+      </div>
     </div>
   );
 };

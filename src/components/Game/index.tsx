@@ -124,7 +124,7 @@ class Game extends PureComponent<ISnakeProps, ISnakeState> {
         newSize += 1;
         newScore += 1;
         newSnakePosition = [newHeadPosition, ...snakePosition];
-        this.setFood();
+        this.setFoodPosition();
       } else {
         newSnakePosition = [newHeadPosition, ...snakePosition.slice(0, -1)];
       }
@@ -185,7 +185,7 @@ class Game extends PureComponent<ISnakeProps, ISnakeState> {
     const [x, y] = [getRandomCoordinate(width), getRandomCoordinate(height)];
 
     if (snakePosition.some((part) => isSamePosition({ x, y }, part))) {
-      this.setFood();
+      this.setFoodPosition();
     } else {
       this.setState({
         foodPosition: { x, y },
@@ -229,7 +229,7 @@ class Game extends PureComponent<ISnakeProps, ISnakeState> {
   public renderSnake(): void {
     const { snakePosition } = this.state;
 
-    this.renderGrid();
+    this.renderField();
     this.renderFood();
     snakePosition.forEach((coordinate: ICell) => this.renderSquare(coordinate.x, coordinate.y, SNAKE_COLOR));
   }
