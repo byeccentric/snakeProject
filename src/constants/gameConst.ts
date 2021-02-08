@@ -1,8 +1,8 @@
-export const GRAY_COLOR = '#949494';
-export const WHITE_COLOR = '#ffffff';
+export const WHITE_COLOR = '#FFF';
 export const SNAKE_COLOR = '#999';
 export const FOOD_COLOR = '#F00';
 export const STROKE_COLOR = '#AAA';
+
 export const INITIAL_SNAKE_SIZE = 5;
 export const CELL_SIZE = 20;
 
